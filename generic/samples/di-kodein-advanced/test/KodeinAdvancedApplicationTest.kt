@@ -42,7 +42,7 @@ class KodeinAdvancedApplicationTest {
             kodeinApplication { advancedApplication(it) }
         }
     ) {
-        handleRequest { method = HttpMethod.Get; uri = "/users/" }.apply {
+        handleRequest { method = HttpMethod.Get; uri = "/users" }.apply {
             assertEquals(HttpStatusCode.OK, response.status())
             assertEquals(
                 """
@@ -74,7 +74,7 @@ class KodeinAdvancedApplicationTest {
             }
         }
     ) {
-        handleRequest { method = HttpMethod.Get; uri = "/users/" }.apply {
+        handleRequest { method = HttpMethod.Get; uri = "/users" }.apply {
             assertEquals(HttpStatusCode.OK, response.status())
             assertEquals(
                 """
